@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/crearcuenta_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@color/white"
+    android:fillViewport="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logoInicio"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:contentDescription="Logo"
+            android:src="@drawable/logo"
+            />
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:textColorHint="#99000000"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:hint="Nombre"
+            android:background="@drawable/back_textview"
+            />
+
+        <EditText
+            android:id="@+id/etTelefono"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="25dp"
+            android:textColorHint="#99000000"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:hint="Teléfono"
+            android:inputType="phone"
+            android:background="@drawable/back_textview"
+            />
+
+        <EditText
+            android:id="@+id/etDireccion"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="25dp"
+            android:textColorHint="#99000000"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:hint="Dirección"
+            android:background="@drawable/back_textview"
+            />
+
+        <EditText
+            android:id="@+id/etContra"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="25dp"
+            android:textColorHint="#99000000"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:background="@drawable/back_textview"
+            />
+
+        <Button
+            android:id="@+id/btnCrear"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#298A29"
+            android:text="Crear cuenta"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

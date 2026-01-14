@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#16C179"/>
+    <!-- radio a las esquinas: top-left, top-right, bottom-right, bottom-left -->
+    <corners android:radius="0dp" />
+    <!-- Para que sólo sean redondas las inferiores, usa corner radii -->
+    <corners android:topLeftRadius="0dp"
+        android:topRightRadius="0dp"
+        android:bottomRightRadius="18dp"
+        android:bottomLeftRadius="18dp"/>
+</shape>
