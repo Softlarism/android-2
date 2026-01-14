@@ -9,7 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.example.softlarism.model.Eventos;
 import com.example.softlarism.model.Usuarios;
+import com.example.softlarism.model.Comunidad;
 import com.example.softlarism.network.ApiService;
 import com.example.softlarism.network.RetrofitClient;
 
@@ -69,6 +71,62 @@ public class MainActivity extends AppCompatActivity {
             public void onFailure(Call<List<Usuarios>> call, Throwable t) {
                 Log.e("API","Error de conexion: "+t.getMessage());
                 Toast.makeText(MainActivity.this, "Error: "+t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void obtenerComunidades(){
+        ApiService apiService = RetrofitClient.getClient().create(ApiService.class);
+
+        Call<List<Comunidad>> call = apiService.obtenerComunidades();
+        call.enqueue(new Callback<List<Comunidad>>() {
+            @Override
+            public void onResponse(Call<List<Comunidad>> call, Response<List<Comunidad>> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    List<Comunidad> comunidades = response.body();
+
+                    Log.d("API","Comunidades: "+comunidades.size());
+                    Toast.makeText(MainActivity.this, "Comunidades: "
+                            + comunidades.size(), Toast.LENGTH_SHORT).show();
+
+                    for (Comunidad comunidad : comunidades){
+                        Log.d("API","Comunidad" + comunidad.getCnombre());
+                    }
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<List<Comunidad>> call, Throwable t) {
+                Log.e("API","Error de comunidad: "+ t.getMessage());
+
+            }
+        });
+    }
+    private void obtenerEventos(){
+        ApiService apiService = RetrofitClient.getClient().create(ApiService.class);
+
+        Call<List<Eventos>> call = apiService.obtenerEventos();
+        call.enqueue(new Callback<List<Eventos>>() {
+            @Override
+            public void onResponse(Call<List<Eventos>> call, Response<List<Eventos>> response) {
+                if (response.isSuccessful() && response.body() != null){
+                    List<Eventos> eventos = response.body();
+
+                    Log.d("API","Eventos: "+eventos.size());
+                    Toast.makeText(MainActivity.this, "Eventos: "
+                            + eventos.size(), Toast.LENGTH_SHORT).show();
+
+                    for (Eventos eventos1:eventos){
+                        Log.d("API","Eventos"+eventos1.getId_evento());
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Eventos>> call, Throwable t) {
+                Log.e("API","Error de eventos: "+t.getMessage());
+
             }
         });
     }
