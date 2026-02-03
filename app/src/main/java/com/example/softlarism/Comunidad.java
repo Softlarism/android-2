@@ -29,7 +29,7 @@ public class Comunidad extends Fragment {
     public Comunidad() {
     }
 
-    @Nullable
+    /*@Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
@@ -55,13 +55,13 @@ public class Comunidad extends Fragment {
 
         recyclerComunidades.setLayoutManager(new LinearLayoutManager(requireContext()));
 
-        List<ComunidadItem> lista = new ArrayList<>();
-        lista.add(new ComunidadItem("Vecinos Norte", "CDMX", "12 miembros"));
-        lista.add(new ComunidadItem("Barrio Unido", "Guadalajara", "9 miembros"));
-        lista.add(new ComunidadItem("Seguridad Sur", "Puebla", "15 miembros"));
+        //List<ComunidadItem> lista = new ArrayList<>();
+        //lista.add(new ComunidadItem("Vecinos Norte", "CDMX", "12 miembros"));
+        //lista.add(new ComunidadItem("Barrio Unido", "Guadalajara", "9 miembros"));
+        //lista.add(new ComunidadItem("Seguridad Sur", "Puebla", "15 miembros"));
 
-        Comunidadadapter adapter = new Comunidadadapter(lista);
-        recyclerComunidades.setAdapter(adapter);
+        //Comunidadadapter adapter = new Comunidadadapter(lista);
+        //recyclerComunidades.setAdapter(adapter);
 
         // Botón buscar
         btnBuscar.setOnClickListener(v -> {
@@ -107,5 +107,5 @@ public class Comunidad extends Fragment {
                     .commit();
         });
 
-    }
+    }*/
 }

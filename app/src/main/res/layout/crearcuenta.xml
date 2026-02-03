@@ -22,7 +22,18 @@
             android:contentDescription="Logo"
             android:src="@drawable/logo"
             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear Cuenta"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
 
+        <!-- Nombre xd -->
         <EditText
             android:id="@+id/etNombre"
             android:layout_width="300dp"
@@ -32,9 +43,24 @@
             android:textColor="@color/black"
             android:layout_gravity="center"
             android:hint="Nombre"
+            android:inputType="textPersonName"
             android:background="@drawable/back_textview"
             />
 
+        <!-- Apellido xd -->
+        <EditText
+            android:id="@+id/etApellido"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:textColorHint="#99000000"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:hint="Apellido"
+            android:inputType="textPersonName"
+            android:background="@drawable/back_textview"/>
+
+        <!-- Telefono -->
         <EditText
             android:id="@+id/etTelefono"
             android:layout_width="300dp"
@@ -45,9 +71,25 @@
             android:layout_gravity="center"
             android:hint="Teléfono"
             android:inputType="phone"
+            android:maxLength="10"
             android:background="@drawable/back_textview"
             />
 
+        <!-- Cp -->
+        <EditText
+            android:id="@+id/etCp1"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:textColorHint="#99000000"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:hint="Codigo Postal"
+            android:inputType="number"
+            android:maxLength="13"
+            android:background="@drawable/back_textview"/>
+
+        <!-- Direccion -->
         <EditText
             android:id="@+id/etDireccion"
             android:layout_width="300dp"
@@ -57,14 +99,16 @@
             android:textColor="@color/black"
             android:layout_gravity="center"
             android:hint="Dirección"
+            android:inputType="text"
             android:background="@drawable/back_textview"
             />
+        <!-- Contraseña -->
 
         <EditText
             android:id="@+id/etContra"
             android:layout_width="300dp"
             android:layout_height="45dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:textColorHint="#99000000"
             android:textColor="@color/black"
             android:layout_gravity="center"
@@ -72,6 +116,20 @@
             android:inputType="textPassword"
             android:background="@drawable/back_textview"
             />
+        <!-- Cofnirmar Contraseña -->
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:id="@+id/etCofirmarContraseña"
+            android:layout_marginTop="15dp"
+            android:textColorHint="#99000000"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:hint="Confirmar Contraseña"
+            android:inputType="textPassword"
+            android:background="@drawable/back_textview"/>
+
+        <!-- Crear cuenta -->
 
         <Button
             android:id="@+id/btnCrear"
@@ -80,7 +138,22 @@
             android:layout_gravity="center"
             android:backgroundTint="#298A29"
             android:text="Crear cuenta"
-            android:layout_marginTop="16dp" />
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- ir a login -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvYaTienesCuenta"
+            android:text="¿Ya tienes cuenta? Inicia Sesion"
+            android:textColor="#4d738e"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"/>
 
     </LinearLayout>
 </ScrollView>

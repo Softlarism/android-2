@@ -22,8 +22,9 @@
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:background="@drawable/edittext_rounded"
-        android:hint="Nombre: "
-        android:id="@+id/nombrep3"
+        android:hint="Telefono: "
+        android:id="@+id/telefonop3"
+        android:inputType="phone"
         android:padding="15dp"
         android:layout_marginBottom="20dp"
         />
@@ -33,7 +34,8 @@
         android:layout_gravity="center"
         android:background="@drawable/edittext_rounded"
         android:hint="Contraseña: "
-        android:id="@+id/contraseñap3"
+        android:id="@+id/contrasenap3"
+        android:inputType="textPassword"
         android:padding="15dp"
         android:layout_marginBottom="20dp"/>
 
